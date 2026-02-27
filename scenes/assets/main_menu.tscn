@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtq7a4vt5wqb8"]
+
+[ext_resource type="Script" uid="uid://b2ivuwe4fvcwn" path="res://scripts/main_menu.gd" id="1_bu47c"]
+[ext_resource type="Texture2D" uid="uid://dpv8j6a00cd3r" path="res://art/background.png" id="2_d5s1j"]
+[ext_resource type="FontFile" uid="uid://bwilhida42at5" path="res://art/Jersey10-Regular.ttf" id="2_h37jm"]
+[ext_resource type="Texture2D" uid="uid://d0oxs1rn37k53" path="res://art/untitled math game.png" id="2_owffo"]
+[ext_resource type="StyleBox" uid="uid://d1tyra4oa8rsw" path="res://scenes/assets/mainmenubuttons.tres" id="5_jcwji"]
+[ext_resource type="StyleBox" uid="uid://bvsdwvel6oec3" path="res://scenes/assets/mainmenubuttonshover.tres" id="6_45qkm"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_bu47c")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)
+zoom = Vector2(0.35, 0.35)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(573, 333)
+scale = Vector2(0.64351845, 0.64351845)
+texture = ExtResource("2_d5s1j")
+
+[node name="icon" type="Sprite2D" parent="."]
+position = Vector2(590, 207)
+scale = Vector2(0.54927003, 0.54927003)
+texture = ExtResource("2_owffo")
+
+[node name="ButtonManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 580.0
+offset_top = 337.0
+offset_right = 620.0
+offset_bottom = 377.0
+
+[node name="Start" type="Button" parent="ButtonManager"]
+layout_mode = 0
+offset_left = -148.0
+offset_top = 30.0
+offset_right = 159.0
+offset_bottom = 88.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("2_h37jm")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("5_jcwji")
+theme_override_styles/hover = ExtResource("6_45qkm")
+text = "Start"
+
+[node name="Quit" type="Button" parent="ButtonManager"]
+layout_mode = 0
+offset_left = -146.0
+offset_top = 118.0
+offset_right = 159.0
+offset_bottom = 178.0
+theme_override_fonts/font = ExtResource("2_h37jm")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("5_jcwji")
+theme_override_styles/hover = ExtResource("6_45qkm")
+text = "Quit"
+
+[connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ButtonManager/Quit" to="." method="_on_quit_pressed"]

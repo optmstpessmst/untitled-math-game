@@ -1,0 +1,131 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjfwtko5n708l"]
+
+[ext_resource type="Script" uid="uid://dc255kcownd7d" path="res://modules/Factoring and Special Products/button.gd" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://ies1egg361kn" path="res://modules/Factoring and Special Products/button_2.gd" id="2_7vrkn"]
+[ext_resource type="Script" uid="uid://c0hpon8clq516" path="res://modules/Factoring and Special Products/button_3.gd" id="3_fu7sn"]
+[ext_resource type="Script" uid="uid://cfkowvd44qoe6" path="res://modules/Factoring and Special Products/button_4.gd" id="4_glbon"]
+[ext_resource type="Script" uid="uid://biec2onmfjmp8" path="res://modules/Factoring and Special Products/button_5.gd" id="5_nlkkf"]
+[ext_resource type="Script" uid="uid://7a0su8uudl5k" path="res://modules/Factoring and Special Products/button_6.gd" id="6_nlkkf"]
+[ext_resource type="Script" uid="uid://bjj01r0umo1dc" path="res://modules/Factoring and Special Products/button_7.gd" id="7_qe12f"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(750, 550)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.5609549, 0.5609549, 0.5609549, 1)
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -11.5
+offset_right = 63.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Special Products"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button1" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+keep_pressed_outside = true
+text = "(a+b)^2
+"
+script = ExtResource("1_06t4h")
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "(a-b)^2
+"
+script = ExtResource("2_7vrkn")
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "a^2-b^2"
+script = ExtResource("3_fu7sn")
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "a^3+b^3"
+script = ExtResource("4_glbon")
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "a^3-b^3"
+script = ExtResource("5_nlkkf")
+
+[node name="Button6" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+keep_pressed_outside = true
+text = "Start Testing"
+script = ExtResource("6_nlkkf")
+
+[node name="Button7" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Exit"
+script = ExtResource("7_qe12f")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button1" to="MarginContainer/VBoxContainer/Button1" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="MarginContainer/VBoxContainer/Button1" method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="MarginContainer/VBoxContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="MarginContainer/VBoxContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button4" to="MarginContainer/VBoxContainer/Button4" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button5" to="MarginContainer/VBoxContainer/Button5" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button6" to="MarginContainer/VBoxContainer/Button6" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button7" to="MarginContainer/VBoxContainer/Button7" method="_on_pressed"]

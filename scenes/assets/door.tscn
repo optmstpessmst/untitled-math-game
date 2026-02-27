@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1tfu0ik4qm5u"]
+
+[ext_resource type="Script" uid="uid://do6hepltixu6n" path="res://scripts/door.gd" id="1_sqvv2"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_sqvv2"]
+points = PackedVector2Array(14, 4, 25, 20, -25, 20, -14, 4, 0, 0)
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_sqvv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_sqvv2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

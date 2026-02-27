@@ -1,0 +1,14 @@
+HBoxContainer
+VBoxContainer
+RichTextLabel
+Button
+Sprite2D
+Camera2D
+Control
+Node2D
+DirectionalLight2D
+TileMapLayer
+BoxContainer
+Label
+Panel
+CanvasLayer

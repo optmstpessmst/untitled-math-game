@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctgft627eo8y0"]
+
+[ext_resource type="PackedScene" uid="uid://djgqx77r425b7" path="res://scenes/world/home.tscn" id="1_wt17y"]
+[ext_resource type="PackedScene" uid="uid://c47oluu60p6ak" path="res://scenes/assets/player.tscn" id="2_m8u5f"]
+[ext_resource type="Script" uid="uid://8d83xrq4v1ig" path="res://scripts/player.gd" id="3_m8u5f"]
+
+[node name="playground" type="Node2D"]
+y_sort_enabled = true
+
+[node name="home" parent="." instance=ExtResource("1_wt17y")]
+position = Vector2(509, 118)
+
+[node name="player" type="CharacterBody2D" parent="." instance=ExtResource("2_m8u5f")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-27, 20)
+wall_min_slide_angle = 0.785398
+script = ExtResource("3_m8u5f")

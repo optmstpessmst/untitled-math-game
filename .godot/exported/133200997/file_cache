@@ -1,0 +1,25 @@
+res://modules/Factoring and Special Products/(a+b)^2.tscn::4b1ce8bcbb52a0e24531bbce625b0789::1771485935::res://.godot/exported/133200997/export-73ef1f49fb01c44b7337cc818d1e52aa-(a+b)^2.scn
+res://modules/Factoring and Special Products/(a-b)^2.tscn::aba2d7a0be45950fcae662dd45222e53::1771485771::res://.godot/exported/133200997/export-3c5df162593a766b3927dc2f6cc4e372-(a-b)^2.scn
+res://modules/Factoring and Special Products/a^2-b^2.tscn::7d3eef29586ea5e1a347854adbce1fc0::1771485780::res://.godot/exported/133200997/export-67fa2e7e0b11f5bc50218cc3b0f1126d-a^2-b^2.scn
+res://modules/Factoring and Special Products/a^3+b^3.tscn::41a4e16e04d8a6aa798e36eb5de5c9c5::1771485945::res://.godot/exported/133200997/export-3e80c34d834fddf72c333f356477a3be-a^3+b^3.scn
+res://modules/Factoring and Special Products/a^3-b^3.tscn::7b38d374621c1e430018b1712a404562::1771485833::res://.godot/exported/133200997/export-862e8d284fcfd8c1f5d2a62071dcc585-a^3-b^3.scn
+res://modules/Factoring and Special Products/main.tscn::040277fec17d57d3d7879334e03521c4::1772005237::res://.godot/exported/133200997/export-578bc86f0600c080ed521aaf8f02ec2b-main.scn
+res://modules/Factoring and Special Products/main_menu.tscn::3941bbf297566691fe047b8c93052473::1771485873::res://.godot/exported/133200997/export-92c502531ba140eac4967382b6215360-main_menu.scn
+res://modules/Factoring and Special Products/practice1.tscn::3bafd65c137692c3300571e6dc7e8834::1771052698::res://.godot/exported/133200997/export-387896f5ec9655cf69d8e63582b70693-practice1.scn
+res://modules/Factoring and Special Products/practice2.tscn::dc96b851d07df5409152b464427bcce3::1771052873::res://.godot/exported/133200997/export-9eae113e83a924d6aa1814ef38086aec-practice2.scn
+res://modules/Factoring and Special Products/practice3.tscn::d1134a7a0c85062e35b62cd6212a9e1b::1771053043::res://.godot/exported/133200997/export-e6ca7b296d9875efcfd140470c8b3ad0-practice3.scn
+res://modules/Factoring and Special Products/practice4.tscn::fca592a9c64c9e24cb11ab48499bf97a::1771053206::res://.godot/exported/133200997/export-8ee0d834e974099ac08d575687b67426-practice4.scn
+res://modules/Factoring and Special Products/practice5.tscn::3a085acd28945f00c1e92940807a0e86::1771054165::res://.godot/exported/133200997/export-bc415c4db6c1b791c96d407871c2b0dd-practice5.scn
+res://modules/Factoring and Special Products/practice6.tscn::7768cc747843eae14eb29d645639e7ec::1771054406::res://.godot/exported/133200997/export-cb618a89dce3d5ae45f642473205551c-practice6.scn
+res://modules/Factoring and Special Products/quadratic.tscn::8fd825520f35cd628944b5c4157b18df::1771055082::res://.godot/exported/133200997/export-76d28ee335e9f6b62729e4554f34d6dc-quadratic.scn
+res://scenes/assets/button.tscn::7a6db39faaa85ac47d4366b403daffe8::1770651972::res://.godot/exported/133200997/export-65ce743a6fd9b58f737f0c450ec9a598-button.scn
+res://scenes/assets/dialog.tscn::38e7a85d8be25424988c1c5a4cd4a4ad::1771485843::res://.godot/exported/133200997/export-e13897b377539be7ab35c175c142c1b5-dialog.scn
+res://scenes/assets/door.tscn::fe2b89c0c635c4726cf4d5165334b68f::1771263272::res://.godot/exported/133200997/export-5be9d9e8bf327a4334e9cbbaf934d85a-door.scn
+res://scenes/assets/load_modules.tscn::45a7af318768456af4408abd93652e2b::1772000497::res://.godot/exported/133200997/export-48f83dd9464ed2b07e8290c9f3a22f4c-load_modules.scn
+res://scenes/assets/mainmenubuttons.tres::e67aa14a2c873eba86e80696611a13f8::1771335000::res://.godot/exported/133200997/export-7b27f9446aaad56accd252418c167655-mainmenubuttons.res
+res://scenes/assets/mainmenubuttonshover.tres::30dd9ab9f7b5e89835ecd39714c7f42f::1771335042::res://.godot/exported/133200997/export-e5d449a15b4f34d60d26102e7db28bb0-mainmenubuttonshover.res
+res://scenes/assets/main_menu.tscn::e75d752b86a747cd5905bf8f6c5d6a64::1771375973::res://.godot/exported/133200997/export-6b33b47837ba8ed409b61f314ea0b266-main_menu.scn
+res://scenes/assets/player.tscn::0b6cf9b389227d5ccf8768acc4d4fcdd::1771307818::res://.godot/exported/133200997/export-cafe0ce219e229723c67d801606bac04-player.scn
+res://scenes/assets/sign.tscn::fe5e068414c06af65e2f91055cd1935f::1770631720::res://.godot/exported/133200997/export-313bbb48a3e6324f4b301362d8b73238-sign.scn
+res://scenes/world/home.tscn::121a83904d1d6fc4cbcf60a2d9dd268c::1772006194::res://.godot/exported/133200997/export-9ca2089303975f781efbfd7aee83e0d3-home.scn
+res://playground.tscn::d283f691fe7d6e2f7a59d73ec192d101::1771332305::res://.godot/exported/133200997/export-a6dfcab98793d2f98ec1123dea3ffe48-playground.scn
