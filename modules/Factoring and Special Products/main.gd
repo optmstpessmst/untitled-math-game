@@ -8,6 +8,7 @@ extends Control
 @onready var result_label   = $MarginContainer/VBoxContainer/ResultLabel
 @onready var next_button    = $MarginContainer/VBoxContainer/NextQuestionButton
 
+var product_type: int
 var correct_answer: String
 var a: int
 var b: int
@@ -22,11 +23,38 @@ func _ready():
 	randomize()
 	submit_button.pressed.connect(on_submit)
 	next_button.pressed.connect(on_next_question)
+	
+	SaveLoad._load()
+
+	score = SaveLoad.contents.factor_score
+	total_questions = SaveLoad.contents.factor_total_questions
+	
+	if SaveLoad.contents.factor_question_text != "":
+		# Restore previous question
+		a = SaveLoad.contents.factor_a
+		b = SaveLoad.contents.factor_b
+		product_type = SaveLoad.contents.factor_product_type
+		
+		question_label.text = SaveLoad.contents.factor_question_text
+		correct_answer = SaveLoad.contents.factor_correct_answer
+	else:
+		generate_problem()
 
 	next_button.visible = false
 	update_score_label()
-	generate_problem()
 
+func save_module_state():
+	SaveLoad._load()
+
+	SaveLoad.contents.factor_score = score
+	SaveLoad.contents.factor_total_questions = total_questions
+	SaveLoad.contents.factor_a = a
+	SaveLoad.contents.factor_b = b
+	SaveLoad.contents.factor_product_type = product_type
+	SaveLoad.contents.factor_question_text = question_label.text
+	SaveLoad.contents.factor_correct_answer = correct_answer
+	
+	SaveLoad._save()
 
 # -------------------------
 # Format coefficient nicely
@@ -82,7 +110,7 @@ func generate_problem():
 	a = randi_range(1, 5)
 	b = randi_range(1, 5)
 
-	var product_type = randi_range(1, 6)
+	product_type = randi_range(1, 6)
 
 	match product_type:
 
@@ -203,17 +231,23 @@ func on_next_question():
 # End Test
 # -------------------------
 func end_test():
-	SaveLoad.contents.player_exp += score
-	SaveLoad._save()
 	question_label.text = "TEST COMPLETE! 🎉"
 	result_label.text = "Final Score: " + str(score) + " / " + str(MAX_QUESTIONS)
 
 	answer_input.visible = false
 	submit_button.visible = false
 	next_button.visible = false
+	
+	SaveLoad.contents.player_exp += score
+	SaveLoad.contents.factor_score = 0
+	SaveLoad.contents.factor_total_questions = 0
+	SaveLoad.contents.factor_question_text = ""
+	SaveLoad.contents.factor_correct_answer = ""
+	SaveLoad._save()
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		save_module_state()
 		SaveLoad.contents.player_exp += score
 		SaveLoad._save()
 		get_tree().quit() 
@@ -221,4 +255,5 @@ func _notification(what):
 func _on_button_pressed() -> void:
 	SaveLoad.contents.player_exp += score
 	SaveLoad._save()
+	save_module_state()
 	get_tree().change_scene_to_file("res://modules/Factoring and Special Products/main_menu.tscn")

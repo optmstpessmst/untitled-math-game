@@ -1,1 +1,3 @@
-res://scripts/sign.gd
+res://scenes/world/home.tscn
+res://scripts/saveload.gd
+res://modules/Factoring and Special Products/main.gd
