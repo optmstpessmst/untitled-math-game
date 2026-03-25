@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="mathgame (4.4)"
+config/name="untitled math game!"
 run/main_scene="uid://dtq7a4vt5wqb8"
 config/features=PackedStringArray("4.5", "Mobile")
 

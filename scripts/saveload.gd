@@ -1,7 +1,7 @@
 extends Node
 
 var player_position: Vector2 = Vector2.ZERO
-const save_location = "user://SaveFile5.json"
+const save_location = "user://SaveFile6.json"
 
 var contents : Dictionary = {
 	"player_exp": 0,
@@ -13,7 +13,8 @@ var contents : Dictionary = {
 	"factor_a": 0,
 	"factor_b": 0,
 	"factor_question_text": "",
-	"factor_correct_answer": ""
+	"factor_correct_answer": "",
+	"factor_product_type": "",
 }
 
 func _ready() -> void:
@@ -41,3 +42,4 @@ func _load():
 		contents.factor_b = save_data.factor_b
 		contents.factor_question_text = save_data.factor_question_text
 		contents.factor_correct_answer = save_data.factor_correct_answer
+		contents.factor_product_type = save_data.factor_product_type

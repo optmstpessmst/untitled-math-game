@@ -29,6 +29,10 @@ func _ready():
 	score = SaveLoad.contents.factor_score
 	total_questions = SaveLoad.contents.factor_total_questions
 	
+	if total_questions >= MAX_QUESTIONS:
+		score = 0
+		total_questions = 0
+	
 	if SaveLoad.contents.factor_question_text != "":
 		# Restore previous question
 		a = SaveLoad.contents.factor_a
@@ -243,7 +247,10 @@ func end_test():
 	SaveLoad.contents.factor_total_questions = 0
 	SaveLoad.contents.factor_question_text = ""
 	SaveLoad.contents.factor_correct_answer = ""
-	SaveLoad._save()
+	SaveLoad.contents.factor_a = 0
+	SaveLoad.contents.factor_b = 0
+	SaveLoad.contents.factor_product_type = 0
+	save_module_state()
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
